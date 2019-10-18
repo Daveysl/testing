@@ -1,0 +1,21 @@
+<div class="view__selected">
+  <div class="nav">
+    <select id="lstSamples" class="nav__menu" [(ngModel)]="portfolioData.selected">
+        <option *ngFor="let sample of portfolioData.samples" [ngValue]="sample">{{sample.name}}</option>
+    </select>
+  </div>
+  
+    <div class="content">
+        <div id="txtName" class="content__title">{{ portfolioData.selected.name | uppercase }}</div>
+        <div id="txtDescription" class="content__description">{{ portfolioData.selected.description }}</div>
+        <div>
+            <a [href]="portfolioData.selected.url" target="_blank" id="lnkUrl" class="content__link">{{ portfolioData.selected.url }}</a>
+        </div>
+        <div class="content__iconset">
+            <img src="assets/images/{{ portfolioData.selected.images[0].filename }}" alt="Portfolio Sample" class="content__icon"/>
+            <img src="assets/images/{{ portfolioData.selected.images[1].filename }}" alt="Portfolio Sample" class="content__icon content__icon--shrink"/>
+            <img src="assets/images/{{ portfolioData.selected.images[2].filename }}" alt="Portfolio Sample" class="content__icon content__icon--shrink"/>
+            <img src="assets/images/{{ portfolioData.selected.images[3].filename }}" alt="Portfolio Sample" class="content__icon content__icon--shrink"/>
+        </div>
+    </div>
+</div>

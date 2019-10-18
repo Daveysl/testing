@@ -1,0 +1,21 @@
+// base style variables
+$background-color:#035074;
+$font-color:#FFFFFF;
+$base-font-size:12px;
+$font-faces: arial,verdana,sans-serif;
+
+@mixin display-flex() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+// this mixin is included even though it is never used (just in case)
+@mixin flex($args) {
+    -webkit-box-flex: $args;
+    -webkit-flex: $args;
+    -ms-flex: $args;
+    flex: $args; 
+}

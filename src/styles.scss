@@ -1,0 +1,28 @@
+@import "_globals";
+@import "./../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+
+body {
+    background-color: $background-color;
+    color: $font-color;
+    font-family: $font-faces;
+    font-size: $base-font-size;
+    padding: 10px;
+}
+
+.loading-overlay {
+    position: fixed;
+    z-index: 999;
+    left:0px;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    overflow: show;
+    margin: auto;
+    background-color: #035074;
+    @include display-flex();
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    color: $font-color;
+    font-size: 48px;
+}

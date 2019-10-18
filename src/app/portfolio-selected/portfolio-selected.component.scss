@@ -1,0 +1,70 @@
+@import "./../../_globals";
+
+.view__selected {
+    @include display-flex();
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+}
+
+.nav {
+    padding-right:20px;
+    padding-bottom:20px;
+
+    &__menu {
+        font-family:$font-faces;
+        font-size:$base-font-size;
+        color:$font-color;
+        border:2px solid $font-color;
+        display:inline-block;
+        vertical-align:middle;
+        padding:7px 2px 5px 10px;
+        height:32px;
+        width:200px;
+        border-radius: 5px;
+        background:transparent;
+        &:focus {
+            outline:0;
+        }
+        & option {
+            color: #000000;
+        }
+    }
+}
+
+.content {
+    &__title {
+        font-family: "Arvo", sans-serif;
+        font-weight: bold;
+        padding-bottom: 10px;
+        font-size:$base-font-size * 2;
+    }
+
+    &__description {
+        padding-bottom: 10px;
+        max-width:500px;
+    }
+
+    &__link {
+        color:$font-color;
+        text-decoration: none;
+        font-size:$base-font-size * 1.25;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__iconset {
+        padding-top: 10px;
+    }
+
+    &__icon {
+        border-radius:10px;
+        margin-right: 5px;
+    }
+
+    &__icon--shrink {
+        border-radius:5px;
+        width: 50px;
+    }
+}

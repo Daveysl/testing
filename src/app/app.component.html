@@ -1,0 +1,22 @@
+<div class="main" *ngIf="portfolioData.loaded">
+  <div class="header">
+    <div class="header header--title">Portfolio Sampler</div>
+    <div class="header header--subtitle">Web App implementing AJAX</div>
+  </div>
+
+  <div class="view" *ngIf="portfolioData.samples.length != 0">
+    <div class="view__radios">
+      View: <input name="view" type="radio" value="1" [checked]="this.router.url == '/selected' ? true : false"  [routerLink]="['/selected']" />
+      Selected <input name="view" type="radio" value="2" [checked]="this.router.url == '/all' ? true : false" [routerLink]="['/all']" />All
+    </div> 
+
+    <router-outlet></router-outlet>
+              
+  </div>
+
+  <div class="view" *ngIf="portfolioData.samples.length == 0">
+    <div class="view__radios">
+      No portfolio samples available :(
+    </div>
+  </div>
+</div>

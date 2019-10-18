@@ -1,0 +1,33 @@
+@import "./../_globals";
+
+.main {
+    display:grid;
+    // make entire app one column since .nav and .content are contained in .page now
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-row-gap:15px;
+}
+
+.header {
+  
+    grid-column: span 2;
+  
+    font-size:$base-font-size * 4; 
+    color: mix($background-color, $font-color);
+   
+    &--title {
+      font-family: "Arvo", sans-serif;
+      font-weight: bold;
+    }
+  
+    &--subtitle {
+      font-size:$base-font-size;
+      letter-spacing:3px;
+      padding-bottom:8px;
+    }
+  }
+
+.view__radios {
+    font-size:$base-font-size * 1.25;
+    margin-bottom:15px;
+}

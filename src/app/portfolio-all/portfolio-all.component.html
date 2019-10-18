@@ -1,0 +1,10 @@
+<div class="content content--viewall" *ngFor="let sample of portfolioData.samples">
+  <div>
+      <img src="assets/images/{{sample.images[0].filename}}" alt="Portfolio Sample" class="content__icon"/>
+  </div>
+  <div>
+      <div class="content__title">{{sample.name | titlecase}}</div>
+      <div class="content__description" [innerHTML]="sample.description"></div>
+      <a href="{{sample.url}}" class="content__link" target="_blank">{{sample.url}}</a>
+  </div>
+</div>
